@@ -6,7 +6,8 @@
 \alias{polmineR.Rcpp-package}
 \title{Rcpp extension for polmineR.}
 \description{
-Rcpp extension for polmineR.
+Based on the functionality of the cl corpus library, this package
+offers functions for performance critial tasks in the polmineR package.
 }
 \examples{
 \dontrun{

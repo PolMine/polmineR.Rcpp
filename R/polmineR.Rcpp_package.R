@@ -90,3 +90,15 @@ getCbowMatrix <- function(corpus, pAttribute = "word", registry = Sys.getenv("CO
 regionsToCountMatrix <- function(corpus, pAttribute = "word", registry = Sys.getenv("CORPUS_REGISTRY"), matrix){
   regions_to_count_matrix(corpus = corpus, p_attribute = pAttribute, registry = registry, matrix = matrix)
 }
+
+#' Turn regions into ids.
+#' 
+#' @param corpus character
+#' @param pAttribute character
+#' @param registry character
+#' @param matrix matrix (2 columns) with regions
+#' @export regionsToIds
+#' @aliases regions_to_ids
+regionsToIds <- function(corpus, pAttribute, registry, matrix){
+  regions_to_ids(corpus = corpus, p_attribute = pAttribute, registry = registry, matrix = matrix)
+}
