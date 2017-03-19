@@ -1,0 +1,2 @@
+PKG_CPPFLAGS='-I../inst/include/cwb'
+PKG_LIBS=-L/Programme/CWB/bin -lglib-2.0-0 -lpcre-1 -L/Programme/CWB/lib -lcl -lws2_32 
