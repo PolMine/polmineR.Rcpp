@@ -1,7 +1,8 @@
 #' Rcpp extension for polmineR.
 #' 
 #' Based on the functionality of the cl corpus library, this package
-#' offers functions for performance critial tasks in the polmineR package.
+#' offers wrappers for core functions of the corpus library, and 
+#' functions for performance critial tasks in the polmineR package.
 #' 
 #' @author Andreas Blaette (andreas.blaette@@uni-due.de)
 #' @references http://polmine.sowi.uni-due.de
@@ -10,6 +11,8 @@
 #' @rdname polmineR.Rcpp
 #' @name polmineR.Rcpp
 #' @useDynLib polmineR.Rcpp
+#' @aliases attribute_size lexicon_size cpos2struc cpos2str cpos2id struc2cpos
+#' id2str struc2str regex2id str2id id2freq id2cpos cpos2lbound cpos2rbound
 #' @importFrom Rcpp evalCpp
 #' @exportPattern "^[[:alpha:]]+"
 #' @examples 

@@ -2,12 +2,27 @@
 % Please edit documentation in R/polmineR.Rcpp_package.R
 \docType{package}
 \name{polmineR.Rcpp}
+\alias{attribute_size}
+\alias{cpos2id}
+\alias{cpos2lbound}
+\alias{cpos2rbound}
+\alias{cpos2str}
+\alias{cpos2struc}
+\alias{id2cpos}
+\alias{id2freq}
+\alias{id2str}
+\alias{lexicon_size}
 \alias{polmineR.Rcpp}
 \alias{polmineR.Rcpp-package}
+\alias{regex2id}
+\alias{str2id}
+\alias{struc2cpos}
+\alias{struc2str}
 \title{Rcpp extension for polmineR.}
 \description{
 Based on the functionality of the cl corpus library, this package
-offers functions for performance critial tasks in the polmineR package.
+offers wrappers for core functions of the corpus library, and 
+functions for performance critial tasks in the polmineR package.
 }
 \examples{
 \dontrun{
