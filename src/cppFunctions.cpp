@@ -293,9 +293,11 @@ Rcpp::StringVector struc2str(SEXP corpus, SEXP s_attribute, Rcpp::IntegerVector 
   Attribute* att = make_s_attribute(corpus, s_attribute, registry);
   int len = struc.length();
   Rcpp::StringVector result(len);
-  int i;
-  for (i = 0; i < len; i++){
-    result(i) = cl_struc2str(att, struc(i));
+  if ( cl_struc_values(att) ){
+    int i;
+    for (i = 0; i < len; i++){
+      result(i) = cl_struc2str(att, struc(i));
+    }
   }
   return ( result );
 }
