@@ -20,3 +20,6 @@ Binaries of the package will be hosted at the PolMine R repository (polmine.sowi
 * Run "R CMD build polmineR.Rcpp" in the folder with the polmineR.Rcpp-folder.
 * Run "R CMD INSTALL polmineR.Rcpp_VERSION".
 
+```sh
+R CMD INSTALL --build --no-test-load polmineR.Rcpp
+```
