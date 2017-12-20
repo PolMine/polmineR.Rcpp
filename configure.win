@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if [ ! -e "inst/libs" ]; then
+    mkdir inst/libs
+fi
+if [ ! -e "inst/libs/i386" ]; then
+    mkdir inst/libs/i386
+fi
+if [ ! -e "inst/libs/x64" ]; then
+    mkdir inst/libs/x64
+fi
+
+
+
+cp windows/cwb/lib/i386/* inst/libs/i386
+cp windows/cwb/lib/x64/* inst/libs/x64
