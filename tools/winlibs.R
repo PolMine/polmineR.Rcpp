@@ -1,9 +1,46 @@
 # Build against libxml2 from Rtools
-if (FALSE){
-# if (!file.exists("../windows/libxml2-2.9.4/include/libxml2/libxml/parser.h")) {
-  # if(getRversion() < "3.3.0") setInternet2()
-  # download.file("https://github.com/rwinlib/libxml2/archive/v2.9.4.zip", "lib.zip", quiet = TRUE)
+if (TRUE) {
   # dir.create("../windows", showWarnings = FALSE)
-  # unzip("lib.zip", exdir = "../windows")
-  # unlink("lib.zip")
+  # dir.create("../inst/cwb", showWarnings = FALSE)
+  # dir.create("../inst/libs", showWarnings = FALSE)
+  # dir.create("../inst/libs/x64", showWarnings = FALSE)
+ 
+  if(getRversion() < "3.3.0") setInternet2()
+ 
+  download.file(
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libglib-2.0-0.dll",
+    "../inst/libs/x64/libglib-2.0-0.dll", quiet = TRUE,
+    method = "curl"
+  )
+  download.file(
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libiconv-2.dll", 
+    "../inst/libs/x64/libiconv-2.dll", quiet =  TRUE,
+    method = "curl"
+  )
+  download.file(
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libintl-8.dll",
+    "../inst/libs/x64/libintl-8.dll", quiet = TRUE,
+    method = "curl"
+  )
+  download.file(
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libpcre-1.dll", 
+    "../inst/libs/x64/libpcre-1.dll", quiet = TRUE,
+    method = "curl"
+  )
+  download.file(
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libpcreposix-0.dll", 
+    "../inst/libs/x64/libpcreposix-0.dll", quiet = TRUE,
+    method = "curl"
+  )
+  download.file(
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libwinpthread-1.dll", 
+    "../inst/libs/x64/libwinpthread-1.dll", quiet = TRUE,
+    method = "curl"
+  )
+  download.file(
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libcl.a", 
+    "../inst/libs/x64/libcl.a", quiet = TRUE, 
+    method = "curl"
+  )
 }
+
