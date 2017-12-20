@@ -1,2 +1,12 @@
 PKG_CPPFLAGS='-I../inst/include/cwb'
-PKG_LIBS=-L/Programme/CWB/bin -L/"Program Files"/CWB/bin -lglib-2.0-0 -lpcre-1 -L/"Program Files"/CWB/lib -L/Programme/CWB/lib -L/"Program Files (x86)"/CWB/lib -L/"Program Files (x86)"/CWB/bin -L/tmp -lcl -lws2_32 
+PKG_LIBS=-L../windows/cwb/lib${R_ARCH} -lglib-2.0-0 -lpcre-1 -lcl -lws2_32
+
+all: clean winlibs
+
+clean:
+	rm -f $(OBJECTS) $(SHLIB)
+
+winlibs:
+	"${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" --vanilla "../tools/winlibs.R"
+
+.PHONY: all winlibs clean
