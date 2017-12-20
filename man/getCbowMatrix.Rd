@@ -22,4 +22,3 @@ getCbowMatrix(corpus, pAttribute = "word",
 \description{
 Substantially faster than lapply(cqi_struc2cpos).
 }
-

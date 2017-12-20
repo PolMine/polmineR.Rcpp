@@ -17,4 +17,3 @@ decodeSAttribute(corpus, sAttribute, registry = Sys.getenv("CORPUS_REGISTRY"))
 \description{
 Proof of concept - not faster than rcqp::cqi_struc2str.
 }
-

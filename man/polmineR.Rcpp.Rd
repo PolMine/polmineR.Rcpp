@@ -2,22 +2,22 @@
 % Please edit documentation in R/polmineR.Rcpp_package.R
 \docType{package}
 \name{polmineR.Rcpp}
-\alias{attribute_size}
-\alias{cpos2id}
-\alias{cpos2lbound}
-\alias{cpos2rbound}
-\alias{cpos2str}
-\alias{cpos2struc}
-\alias{id2cpos}
-\alias{id2freq}
-\alias{id2str}
-\alias{lexicon_size}
 \alias{polmineR.Rcpp}
-\alias{polmineR.Rcpp-package}
+\alias{attribute_size}
+\alias{lexicon_size}
+\alias{cpos2struc}
+\alias{cpos2str}
+\alias{cpos2id}
+\alias{struc2cpos}
+\alias{id2str}
+\alias{struc2str}
 \alias{regex2id}
 \alias{str2id}
-\alias{struc2cpos}
-\alias{struc2str}
+\alias{id2freq}
+\alias{id2cpos}
+\alias{cpos2lbound}
+\alias{cpos2rbound}
+\alias{polmineR.Rcpp-package}
 \title{Rcpp extension for polmineR.}
 \description{
 Based on the functionality of the cl corpus library, this package
@@ -29,11 +29,10 @@ functions for performance critial tasks in the polmineR package.
 MAKEFLAGS="CFLAGS='-I/Library/Frameworks/R.framework/Versions/3.2/Resources/library/Rcpp/include'" R CMD SHLIB cwb-s-decode.c -L/usr/local/bin -lcl
 }
 }
-\author{
-Andreas Blaette (andreas.blaette@uni-due.de)
-}
 \references{
 http://polmine.sowi.uni-due.de
 }
+\author{
+Andreas Blaette (andreas.blaette@uni-due.de)
+}
 \keyword{package}
-

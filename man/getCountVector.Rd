@@ -18,4 +18,3 @@ getCountVector(corpus, pAttribute = "word",
 \description{
 Substantially faster than cqi_cpos2str/tabulate.
 }
-

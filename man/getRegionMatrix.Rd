@@ -20,4 +20,3 @@ getRegionMatrix(corpus, sAttribute = "word", strucs,
 \description{
 Substantially faster than lapply(cqi_struc2cpos).
 }
-

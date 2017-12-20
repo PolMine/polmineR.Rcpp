@@ -36,13 +36,13 @@ helpful up to the point where it comes to cross-compiling glib.
 
 Installation of x86_64-w64-mingw32-gcc on a Linux machine.
 
-```{sh}
+```{sh, eval = FALSE}
 sudo apt-get install mingw-w64
 ```
 
 To get the installation directory for cross-compilation:
 
-```{sh}
+```{sh, eval = FALSE}
 MINGW_OUTPUT_TMP=`x86_64-w64-mingw32-gcc --print-search-dirs | grep ^install`; echo ${MINGW_OUTPUT_TMP:9}
 ```
 
@@ -51,7 +51,7 @@ Note: This line is from the INSTALL.WIN instructions.
 
 ### Cross-compiling pcre
 
-```{sh}
+```{sh, eval = FALSE}
 wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.gz
 tar xzfv pcre-8.39.tar.gz
 cd pcre-8.39
@@ -68,7 +68,7 @@ sudo make install
 
 ### libiconv
 
-```{sh}
+```{sh, eval = FALSE}
 wget https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.15.tar.gz
 tar xzfv libiconv-1.15.tar.gz
 cd libiconv-1.15/
@@ -87,7 +87,7 @@ sudo make install
 
 Thought this was necessary for gettext - but I am not really sure.
 
-```{sh}
+```{sh, eval = FALSE}
 wget http://downloads.sourceforge.net/expat/expat-2.1.0.tar.gz
 tar xzfv expat-2.1.0.tar.gz
 cd expat-2.1.0
@@ -105,7 +105,7 @@ sudo make install
 
 This cost me a lot of nerves and it was painful. At the end it simply worked, but I do not know why.
 
-```{sh}
+```{sh, eval = FALSE}
 wget http://ftp.gnu.org/pub/gnu/gettext/gettext-latest.tar.gz
 tar xzfv gettext-latest.tar.gz
 cd gettext-0.19.8.1/
@@ -122,7 +122,7 @@ sudo make install
 
 ### libffi
 
-```{sh}
+```{sh, eval = FALSE}
 wget ftp://sourceware.org/pub/libffi/libffi-3.2.tar.gz
 tar xzfv libffi-3.2.tar.gz
 cd libffi-3.2
@@ -144,7 +144,7 @@ sudo make install
 It never worked to do it myself. Here you can get binaries in a 
 simple and dirty way: BEST CHOICE!!
 
-```{sh}
+```{sh, eval = FALSE}
 wget http://ftp.gnome.org/pub/gnome/binaries/win64/glib/2.26/
 ```
 
@@ -152,14 +152,14 @@ Copy files to cross compiler dirs after download.
 
 This is where I finally got libglib-2.0.0.dll:
 
-```{sh}
+```{sh, eval = FALSE}
 wget http://ftp.gnome.org/pub/gnome/binaries/win64/glib/2.26/glib_2.26.0-1_win64.zip
 ```
 
 This is the effort to cross compile glib myself - it always failed, which
 seems to be a typical problem
 
-```{sh}
+```{sh, eval = FALSE}
 wget http://ftp.gnome.org/pub/gnome/sources/glib/2.50/glib-2.50.0.tar.xz
 tar xf glib-2.50.0.tar.xz
 cd glib-2.50.0
@@ -181,7 +181,7 @@ Basically, I followed the instructions in the INSTALL.WIN file. In addition:
 * Got a fresh copy of CWB with svn
 * made the following changes in config.mk:
 
-```{sh}
+```{sh, eval = FALSE}
 PLATFORM=mingw-cross
 SITE=windows-release
 # RELEASE_ARCH = x86_64 
@@ -192,7 +192,7 @@ LIBGLIB_DLL_PATH=/usr/lib/gcc/x86_64-w64-mingw32/4.8/lib
 
 * in ./config/platform replaced every 'i586 ...' with 'x86_64-w64-mingw32'
 
-```{sh}
+```{sh, eval = FALSE}
 CC = x86_64-w64-mingw32-gcc
 LD = x86_64-w64-mingw32-ld
 RC = x86_64-w64-mingw32-windres
@@ -207,7 +207,7 @@ DEPEND = x86_64-w64-mingw32-gcc -MM -MG
 
 At the end, instructions of INSTALL-WIN again:
   
-```{sh}
+```{sh, eval = FALSE}
 make clean
 make depend
 make all

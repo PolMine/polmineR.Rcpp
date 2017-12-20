@@ -19,4 +19,3 @@ regionsToIds(corpus, pAttribute, registry, matrix)
 \description{
 Turn regions into ids.
 }
-

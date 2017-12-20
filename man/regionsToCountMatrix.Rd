@@ -20,4 +20,3 @@ regionsToCountMatrix(corpus, pAttribute = "word",
 \description{
 Reduces time by one third.
 }
-

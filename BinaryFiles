@@ -1,0 +1,9 @@
+windows/cwb/lib/i386/libglib-2.0-0.dll
+windows/cwb/lib/i386/libpcre-1.dll
+windows/cwb/lib/i386/libpcreposix-0.dll
+windows/cwb/lib/x64/libglib-2.0-0.dll
+windows/cwb/lib/x64/libiconv-2.dll
+windows/cwb/lib/x64/libintl-8.dll
+windows/cwb/lib/x64/libpcre-1.dll
+windows/cwb/lib/x64/libpcreposix-0.dll
+windows/cwb/lib/x64/libwinpthread-1.dll
