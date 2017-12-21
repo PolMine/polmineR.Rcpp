@@ -284,27 +284,6 @@ BEGIN_RCPP
 END_RCPP
 }
 
-RcppExport SEXP polmineR_Rcpp_attribute_size(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_cpos2id(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_cpos2lbound(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_cpos2rbound(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_cpos2str(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_cpos2struc(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_decode_s_attribute(SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_get_cbow_matrix(SEXP, SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_get_count_vector(SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_get_region_matrix(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_id2cpos(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_id2freq(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_id2str(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_lexicon_size(SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_regex2id(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_regions_to_count_matrix(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_regions_to_ids(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_str2id(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_struc2cpos(SEXP, SEXP, SEXP, SEXP);
-RcppExport SEXP polmineR_Rcpp_struc2str(SEXP, SEXP, SEXP, SEXP);
-
 static const R_CallMethodDef CallEntries[] = {
     {"_polmineR_Rcpp_decode_s_attribute", (DL_FUNC) &_polmineR_Rcpp_decode_s_attribute, 3},
     {"_polmineR_Rcpp_get_count_vector", (DL_FUNC) &_polmineR_Rcpp_get_count_vector, 3},
@@ -326,26 +305,6 @@ static const R_CallMethodDef CallEntries[] = {
     {"_polmineR_Rcpp_id2cpos", (DL_FUNC) &_polmineR_Rcpp_id2cpos, 4},
     {"_polmineR_Rcpp_cpos2lbound", (DL_FUNC) &_polmineR_Rcpp_cpos2lbound, 4},
     {"_polmineR_Rcpp_cpos2rbound", (DL_FUNC) &_polmineR_Rcpp_cpos2rbound, 4},
-    {"polmineR_Rcpp_attribute_size",          (DL_FUNC) &polmineR_Rcpp_attribute_size,          4},
-    {"polmineR_Rcpp_cpos2id",                 (DL_FUNC) &polmineR_Rcpp_cpos2id,                 4},
-    {"polmineR_Rcpp_cpos2lbound",             (DL_FUNC) &polmineR_Rcpp_cpos2lbound,             4},
-    {"polmineR_Rcpp_cpos2rbound",             (DL_FUNC) &polmineR_Rcpp_cpos2rbound,             4},
-    {"polmineR_Rcpp_cpos2str",                (DL_FUNC) &polmineR_Rcpp_cpos2str,                4},
-    {"polmineR_Rcpp_cpos2struc",              (DL_FUNC) &polmineR_Rcpp_cpos2struc,              4},
-    {"polmineR_Rcpp_decode_s_attribute",      (DL_FUNC) &polmineR_Rcpp_decode_s_attribute,      3},
-    {"polmineR_Rcpp_get_cbow_matrix",         (DL_FUNC) &polmineR_Rcpp_get_cbow_matrix,         5},
-    {"polmineR_Rcpp_get_count_vector",        (DL_FUNC) &polmineR_Rcpp_get_count_vector,        3},
-    {"polmineR_Rcpp_get_region_matrix",       (DL_FUNC) &polmineR_Rcpp_get_region_matrix,       4},
-    {"polmineR_Rcpp_id2cpos",                 (DL_FUNC) &polmineR_Rcpp_id2cpos,                 4},
-    {"polmineR_Rcpp_id2freq",                 (DL_FUNC) &polmineR_Rcpp_id2freq,                 4},
-    {"polmineR_Rcpp_id2str",                  (DL_FUNC) &polmineR_Rcpp_id2str,                  4},
-    {"polmineR_Rcpp_lexicon_size",            (DL_FUNC) &polmineR_Rcpp_lexicon_size,            3},
-    {"polmineR_Rcpp_regex2id",                (DL_FUNC) &polmineR_Rcpp_regex2id,                4},
-    {"polmineR_Rcpp_regions_to_count_matrix", (DL_FUNC) &polmineR_Rcpp_regions_to_count_matrix, 4},
-    {"polmineR_Rcpp_regions_to_ids",          (DL_FUNC) &polmineR_Rcpp_regions_to_ids,          4},
-    {"polmineR_Rcpp_str2id",                  (DL_FUNC) &polmineR_Rcpp_str2id,                  4},
-    {"polmineR_Rcpp_struc2cpos",              (DL_FUNC) &polmineR_Rcpp_struc2cpos,              4},
-    {"polmineR_Rcpp_struc2str",               (DL_FUNC) &polmineR_Rcpp_struc2str,               4},
     {NULL, NULL, 0}
 };
 
