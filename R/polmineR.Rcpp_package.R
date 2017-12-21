@@ -10,7 +10,7 @@
 #' @docType package
 #' @rdname polmineR.Rcpp
 #' @name polmineR.Rcpp
-#' @useDynLib polmineR.Rcpp
+#' @useDynLib polmineR.Rcpp, .registration = TRUE
 #' @aliases attribute_size lexicon_size cpos2struc cpos2str cpos2id struc2cpos
 #' id2str struc2str regex2id str2id id2freq id2cpos cpos2lbound cpos2rbound
 #' @importFrom Rcpp evalCpp
