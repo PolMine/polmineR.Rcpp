@@ -1,6 +1,5 @@
 # Build against libxml2 from Rtools
 if (TRUE) {
-  dir.create("../inst/cwb", showWarnings = FALSE)
   dir.create("../inst/libs", showWarnings = FALSE)
   dir.create("../inst/libs/x64", showWarnings = FALSE)
   dir.create("../inst/libs/i386", showWarnings = FALSE)
