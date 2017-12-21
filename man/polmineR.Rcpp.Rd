@@ -24,11 +24,6 @@ Based on the functionality of the cl corpus library, this package
 offers wrappers for core functions of the corpus library, and 
 functions for performance critial tasks in the polmineR package.
 }
-\examples{
-\dontrun{
-MAKEFLAGS="CFLAGS='-I/Library/Frameworks/R.framework/Versions/3.2/Resources/library/Rcpp/include'" R CMD SHLIB cwb-s-decode.c -L/usr/local/bin -lcl
-}
-}
 \references{
 http://polmine.sowi.uni-due.de
 }
