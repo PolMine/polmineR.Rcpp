@@ -15,12 +15,6 @@
 #' id2str struc2str regex2id str2id id2freq id2cpos cpos2lbound cpos2rbound
 #' @importFrom Rcpp evalCpp
 #' @exportPattern "^[[:alpha:]]+"
-#' @examples 
-#' \dontrun{
-#' MAKEFLAGS="CFLAGS='-I/Library/Frameworks/R.framework/Versions/3.2/Resources/library/Rcpp/include'" R CMD SHLIB cwb-s-decode.c -L/usr/local/bin -lcl
-# dyn.load("/Users/blaette/Lab/gitlab/polmineR.Rcpp/src/cwb-s-decode.so")
-# foo <- .Call("decode", "PLPRTXT", "text_speaker")
-#' }
 NULL
 
 #' Decode s-attributes
