@@ -5,14 +5,14 @@
  cange in NAMESPACE: useDynLib(polmineR.Rcpp, .registration = TRUE)
 */
 
-/*
+
 
 #include <R.h>
 #include <Rinternals.h>
 #include <stdlib.h> // for NULL
 #include <R_ext/Rdynload.h>
 
- */
+ 
  
 /* FIXME: 
    Check these declarations against the C/Fortran source code.
@@ -20,7 +20,7 @@
 
 /* .Call calls */
 
-/*
+
 extern SEXP _polmineR_Rcpp_attribute_size(SEXP, SEXP, SEXP, SEXP);
 extern SEXP _polmineR_Rcpp_cpos2id(SEXP, SEXP, SEXP, SEXP);
 extern SEXP _polmineR_Rcpp_cpos2lbound(SEXP, SEXP, SEXP, SEXP);
@@ -72,4 +72,4 @@ void R_init_polmineR_Rcpp(DllInfo *dll)
     R_useDynamicSymbols(dll, FALSE);
 }
 
-*/
+
