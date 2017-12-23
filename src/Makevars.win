@@ -1,5 +1,5 @@
 PKG_CPPFLAGS='-I../inst/include/cwb'
-PKG_LIBS=-L../inst/libs${R_ARCH} -lglib-2.0-0 -lpcre-1 -lcl -lws2_32
+PKG_LIBS=-L../inst/libs${R_ARCH} -lglib-2.0-0 -lpcre -lcl -lws2_32
 
 all: clean winlibs
 

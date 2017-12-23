@@ -48,17 +48,17 @@ if (TRUE) {
   )
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/x86/libintl-8.dll",
-    "../inst/libs/x64/libintl-8.dll", quiet = TRUE,
+    "../inst/libs/x64/libintl.a", quiet = TRUE,
     method = "curl"
   )
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/x86/libpcre-1.dll", 
-    "../inst/libs/x64/libpcre-1.dll", quiet = TRUE,
+    "../inst/libs/x64/libpcre.a", quiet = TRUE,
     method = "curl"
   )
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/x86/libpcreposix-0.dll", 
-    "../inst/libs/x64/libpcreposix-0.dll", quiet = TRUE,
+    "../inst/libs/x64/libpcreposix.a", quiet = TRUE,
     method = "curl"
   )
   download.file(
