@@ -11,26 +11,21 @@ if (TRUE) {
 
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/i386/libcl.a",
-    "../inst/libs/i386/libcl.a", quiet = TRUE,
+    "../inst/libs/i386/libcl.a", quiet = FALSE,
     method = "curl"
   )
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/i386/libglib-2.0-0.dll", 
-    "../inst/libs/i386/libglib-2.0-0.dll", quiet =  TRUE,
+    "../inst/libs/i386/libglib-2.0-0.dll", quiet =  FALSE,
     method = "curl"
   )
   download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/i386/libpcre-0.dll",
-    "../inst/libs/i386/libpcre-0.dll", quiet = TRUE,
-    method = "curl"
-  )
-  download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/i386/libpcre-1.dll", 
-    "../inst/libs/i386/libpcre-1.dll", quiet = TRUE,
+    "http://polmine.sowi.uni-due.de/public/dlls/i386/libpcre.a", 
+    "../inst/libs/i386/libpcre-1.a", quiet = FALSE,
     method = "curl"
   )
   download.file("http://polmine.sowi.uni-due.de/public/dlls/i386/libpcreposix-0.dll", 
-    "../inst/libs/i386/libpcreposix-0.dll", quiet = TRUE,
+    "../inst/libs/i386/libpcreposix-0.dll", quiet = FALSE,
     method = "curl"
   )
 
@@ -38,37 +33,37 @@ if (TRUE) {
   ## x64 - files -----------------------
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/x86/libglib-2.0-0.dll",
-    "../inst/libs/x64/libglib-2.0-0.dll", quiet = TRUE,
+    "../inst/libs/x64/libglib-2.0-0.dll", quiet = FALSE,
     method = "curl"
   )
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/x86/libiconv-2.dll", 
-    "../inst/libs/x64/libiconv-2.dll", quiet =  TRUE,
+    "../inst/libs/x64/libiconv-2.dll", quiet = FALSE,
     method = "curl"
   )
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/x86/libintl-8.dll",
-    "../inst/libs/x64/libintl.a", quiet = TRUE,
+    "../inst/libs/x64/libintl-8.dll", quiet = FALSE,
     method = "curl"
   )
   download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/x86/libpcre-1.dll", 
-    "../inst/libs/x64/libpcre.a", quiet = TRUE,
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libpcre.a", 
+    "../inst/libs/x64/libpcre-1.a", quiet = FALSE,
     method = "curl"
   )
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/x86/libpcreposix-0.dll", 
-    "../inst/libs/x64/libpcreposix.a", quiet = TRUE,
+    "../inst/libs/x64/libpcreposix-0.dll", quiet = FALSE,
     method = "curl"
   )
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/x86/libwinpthread-1.dll", 
-    "../inst/libs/x64/libwinpthread-1.dll", quiet = TRUE,
+    "../inst/libs/x64/libwinpthread-1.dll", quiet = FALSE,
     method = "curl"
   )
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/x86/libcl.a", 
-    "../inst/libs/x64/libcl.a", quiet = TRUE, 
+    "../inst/libs/x64/libcl.a", quiet = FALSE, 
     method = "curl"
   )
 }
