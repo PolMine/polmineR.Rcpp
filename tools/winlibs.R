@@ -15,35 +15,36 @@ if (TRUE) {
     method = "curl"
   )
   download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/i386/libglib-2.0-0.dll", 
-    "../inst/libs/i386/libglib-2.0-0.dll", quiet =  FALSE,
+    "http://polmine.sowi.uni-due.de/public/dlls/i386/libglib-2.0.a", 
+    "../inst/libs/i386/libglib.a", quiet =  FALSE,
     method = "curl"
   )
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/i386/libpcre.a", 
-    "../inst/libs/i386/libpcre-1.a", quiet = FALSE,
+    "../inst/libs/i386/libpcre.a", quiet = FALSE,
     method = "curl"
   )
-  download.file("http://polmine.sowi.uni-due.de/public/dlls/i386/libpcreposix-0.dll", 
-    "../inst/libs/i386/libpcreposix-0.dll", quiet = FALSE,
+  
+download.file("http://polmine.sowi.uni-due.de/public/dlls/i386/libpcreposix.a", 
+    "../inst/libs/i386/libpcreposix.a", quiet = FALSE,
     method = "curl"
   )
 
 
   ## x64 - files -----------------------
   download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/x86/libglib-2.0-0.dll",
-    "../inst/libs/x64/libglib-2.0-0.dll", quiet = FALSE,
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libglib.a",
+    "../inst/libs/x64/libglib.a", quiet = FALSE,
     method = "curl"
   )
   download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/x86/libiconv-2.dll", 
-    "../inst/libs/x64/libiconv-2.dll", quiet = FALSE,
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libiconv.a", 
+    "../inst/libs/x64/libiconv.a", quiet = FALSE,
     method = "curl"
   )
   download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/x86/libintl-8.dll",
-    "../inst/libs/x64/libintl-8.dll", quiet = FALSE,
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libintl.a",
+    "../inst/libs/x64/libintl.a", quiet = FALSE,
     method = "curl"
   )
   download.file(
@@ -52,8 +53,8 @@ if (TRUE) {
     method = "curl"
   )
   download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/x86/libpcreposix-0.dll", 
-    "../inst/libs/x64/libpcreposix-0.dll", quiet = FALSE,
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libpcreposix.a", 
+    "../inst/libs/x64/libpcreposix.a", quiet = FALSE,
     method = "curl"
   )
   download.file(

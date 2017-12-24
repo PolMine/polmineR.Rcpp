@@ -4,6 +4,7 @@ extern "C" {
   #include <unistd.h>
   #include <string.h>
   #include <cl.h>
+  #include <pcre.h>
 }
 
 #include <Rcpp.h>
