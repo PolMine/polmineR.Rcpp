@@ -9,39 +9,46 @@ if (TRUE) {
   
   ## i386 - files ----------------------
 
-  download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/i386/libcl.a",
-    "../inst/libs/i386/libcl.a", quiet = FALSE,
+   download.file(
+     "http://polmine.sowi.uni-due.de/public/dlls/i386/libcl.a",
+     "../inst/libs/i386/libcl.a", quiet = FALSE,
     method = "curl"
-  )
+   )
   download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/i386/libglib-2.0.a", 
-    "../inst/libs/i386/libglib.a", quiet =  FALSE,
-    method = "curl"
-  )
+     "http://polmine.sowi.uni-due.de/public/dlls/i386/libglib-2.0.a", 
+     "../inst/libs/i386/libglib-2.0.a", quiet =  FALSE,
+     method = "curl"
+    )
   download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/i386/libpcre.a", 
+     "http://polmine.sowi.uni-due.de/public/dlls/i386/libpcre.a", 
     "../inst/libs/i386/libpcre.a", quiet = FALSE,
     method = "curl"
-  )
+   )
   
-download.file("http://polmine.sowi.uni-due.de/public/dlls/i386/libpcreposix.a", 
-    "../inst/libs/i386/libpcreposix.a", quiet = FALSE,
+  # download.file("http://polmine.sowi.uni-due.de/public/dlls/i386/libpcreposix.a", 
+  #  "../inst/libs/i386/libpcreposix.a", quiet = FALSE,
+  #  method = "curl"
+  # )
+ 
+  download.file( 
+   "http://polmine.sowi.uni-due.de/public/dlls/i386/libwinpthread-1.dll",
+    "../inst/libs/i386/libwinpthread-1.dll", quiet = FALSE,
     method = "curl"
   )
+
 
 
   ## x64 - files -----------------------
-  download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/x86/libglib.a",
-    "../inst/libs/x64/libglib.a", quiet = FALSE,
+   download.file(
+    "http://polmine.sowi.uni-due.de/public/dlls/x86/libglib-2.0.a",
+   "../inst/libs/x64/libglib-2.0.a", quiet = FALSE,
     method = "curl"
-  )
-  download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/x86/libiconv.a", 
-    "../inst/libs/x64/libiconv.a", quiet = FALSE,
-    method = "curl"
-  )
+   )
+  # download.file(
+  #  "http://polmine.sowi.uni-due.de/public/dlls/x86/libiconv.a", 
+  #  "../inst/libs/x64/libiconv.a", quiet = FALSE,
+  #  method = "curl"
+  # )
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/x86/libintl.a",
     "../inst/libs/x64/libintl.a", quiet = FALSE,
@@ -49,16 +56,16 @@ download.file("http://polmine.sowi.uni-due.de/public/dlls/i386/libpcreposix.a",
   )
   download.file(
     "http://polmine.sowi.uni-due.de/public/dlls/x86/libpcre.a", 
-    "../inst/libs/x64/libpcre-1.a", quiet = FALSE,
+    "../inst/libs/x64/libpcre.a", quiet = FALSE,
     method = "curl"
-  )
-  download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/x86/libpcreposix.a", 
-    "../inst/libs/x64/libpcreposix.a", quiet = FALSE,
-    method = "curl"
-  )
-  download.file(
-    "http://polmine.sowi.uni-due.de/public/dlls/x86/libwinpthread-1.dll", 
+   )
+  # download.file(
+  #  "http://polmine.sowi.uni-due.de/public/dlls/x86/libpcreposix.a", 
+  #   "../inst/libs/x64/libpcreposix.a", quiet = FALSE,
+  #   method = "curl"
+ # )
+  download.file(   
+  "http://polmine.sowi.uni-due.de/public/dlls/x86/libwinpthread-1.dll", 
     "../inst/libs/x64/libwinpthread-1.dll", quiet = FALSE,
     method = "curl"
   )

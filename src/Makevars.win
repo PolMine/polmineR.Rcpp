@@ -1,10 +1,24 @@
-PKG_CPPFLAGS='-I../inst/include/cwb'
-PKG_LIBS=-L../inst/libs${R_ARCH} -LC:/windows/system32 -Bdynamic -lKernel32 -lwinmm -lOle32 -Bstatic -lpcre -lglib -lcl -Bdynamic  -lws2_32
+CXX_STD=CXX11
+
+
+PKG_CPPFLAGS = \
+    -I../inst/include/cwb
+
+PKG_LIBS = \
+    -L../inst/libs${R_ARCH} \
+    -LC:/windows/system32 \
+    -lcl -lpcre -lglib-2.0 -lintl \
+    -lws2_32 
+
+# -lwinpthread-1 
+# -lKernel32 -lwinmm -lOle32
+ 
+
 
 all: clean winlibs
 
 clean:
-	rm -f $(OBJECTS) $(SHLIB)
+#	rm -f $(OBJECTS) $(SHLIB)
 
 winlibs:
 	"${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" --vanilla "../tools/winlibs.R"

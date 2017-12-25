@@ -8,7 +8,7 @@ extern "C" {
 }
 
 #include <Rcpp.h>
-
+#include <string.h>
 
 int region_matrix_to_size(Rcpp::IntegerMatrix matrix){
   int n;
