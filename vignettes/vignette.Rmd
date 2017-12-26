@@ -20,8 +20,6 @@ help future efforts to cross compile the CWB.
 
 ### Potentially useful resources
 
-The dlls libiconv-2.dll and libintl-8.dll can be obtained from:
-https://mlocati.github.io/articles/gettext-iconv-windows.html
 
 The dll libglib-2.0-0.dll is available at:
 http://www.dlldownloader.com/libglib2-00-dll/
@@ -48,6 +46,7 @@ MINGW_OUTPUT_TMP=`x86_64-w64-mingw32-gcc --print-search-dirs | grep ^install`; e
 
 Note: This line is from the INSTALL.WIN instructions.
 
+# 64 bit
 
 ### Cross-compiling pcre
 
@@ -58,6 +57,7 @@ cd pcre-8.39
 CC=x86_64-w64-mingw32-gcc CC_FOR_BUILD=gcc  ./configure    \
 --host=x86_64-w64-mingw32                                  \
 --enable-utf8 --enable-unicode-properties --enable-jit     \
+--enable-pcre16 --enable-pcre32                            \
 --enable-newline-is-any --disable-cpp --enable-static      \
 --prefix=/usr/lib/gcc/x86_64-w64-mingw32/4.8/              \
 --exec-prefix=/usr/lib/gcc/x86_64-w64-mingw32/4.8/         \
@@ -72,9 +72,9 @@ sudo make install
 wget https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.15.tar.gz
 tar xzfv libiconv-1.15.tar.gz
 cd libiconv-1.15/
-CC=x86_64-w64-mingw32-gcc CC_FOR_BUILD=gcc                            \
-./configure                                                           \
+CC=x86_64-w64-mingw32-gcc CC_FOR_BUILD=gcc ./configure       \
 --host=x86_64-w64-mingw32                                    \
+--enable-static \
 --prefix=/usr/lib/gcc/x86_64-w64-mingw32/4.8/                \
 --exec-prefix=/usr/lib/gcc/x86_64-w64-mingw32/4.8/           \
 --oldincludedir=/usr/lib/gcc/x86_64-w64-mingw32/4.8/include
@@ -226,3 +226,227 @@ I think for 'make release', certain dlls were still missing (libglib-2.0.0.dll),
 so I downloaded that manually from a source indicated above and put that
 into the bin dir in the cross compiler directory.
 
+# 32 bit
+
+## pcre
+
+```{sh, eval = FALSE}
+wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.39.tar.gz
+tar xzfv pcre-8.39.tar.gz
+cd pcre-8.39
+CC=i686-w64-mingw32-gcc CC_FOR_BUILD=gcc  ./configure    \
+--host=i686-w64-mingw32                                  \
+--enable-utf8 --enable-unicode-properties --enable-jit     \
+--enable-newline-is-any --disable-cpp --enable-static      \
+--prefix=/usr/lib/gcc/i686-w64-mingw32/4.8              \
+--exec-prefix=/usr/lib/gcc/i686-w64-mingw32/4.8         \
+--oldincludedir=/usr/lib/gcc/i686-w64-mingw32/4.8/include
+make
+sudo make install
+```
+
+# pcre 2
+
+```{sh, eval = FALSE}
+wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre2-10.21.tar.gz
+tar xzfv pcre2-10.21.tar.gz
+cd pcre2-10.21
+CC=x86_64-w64-mingw32-gcc CC_FOR_BUILD=gcc  ./configure    \
+--host=x86_64-w64-mingw32                                  \
+--enable-utf8 --enable-unicode-properties --enable-jit     \
+--enable-pcre16 --enable-pcre32                            \
+--enable-newline-is-any --disable-cpp --enable-static      \
+--prefix=/usr/lib/gcc/x86_64-w64-mingw32/4.8/              \
+--exec-prefix=/usr/lib/gcc/x86_64-w64-mingw32/4.8/         \
+--oldincludedir=/usr/lib/gcc/x86_64-w64-mingw32/4.8/include
+make
+sudo make install
+```
+
+
+## libiconv
+
+```{sh, eval = FALSE}
+wget https://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.15.tar.gz
+tar xzfv libiconv-1.15.tar.gz
+cd libiconv-1.15/
+CC=i686-w64-mingw32-gcc CC_FOR_BUILD=gcc ./configure      \
+--host=i686-w64-mingw32                                   \
+--prefix=/usr/lib/gcc/i686-w64-mingw32/4.8                \
+--enable-static                                           \
+--exec-prefix=/usr/lib/gcc/i686-w64-mingw32/4.8           \
+--oldincludedir=/usr/lib/gcc/i686-w64-mingw32/4.8/include
+make 
+sudo make install
+```
+
+
+### expat
+
+```{sh, eval = FALSE}
+wget http://downloads.sourceforge.net/expat/expat-2.1.0.tar.gz
+tar xzfv expat-2.1.0.tar.gz
+cd expat-2.1.0
+CC=i686-w64-mingw32-gcc CC_FOR_BUILD=gcc                            \
+./configure                                                           \
+--host=i686-w64-mingw32                                    \
+--prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/                \
+--exec-prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/           \
+--oldincludedir=/usr/lib/gcc/i686-w64-mingw32/4.8/include
+make 
+sudo make install
+```
+
+## liblzma
+
+liblzma von github clonen 
+
+```{sh, eval = FALSE}
+cd lzma/
+CC=i686-w64-mingw32-gcc CC_FOR_BUILD=gcc                            \
+./configure                                                           \
+--host=i686-w64-mingw32                                    \
+--prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/                \
+--exec-prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/
+make
+sudo make install
+```
+
+## libxml2
+
+```{sh, eval = FALSE}
+wget ftp://xmlsoft.org/libxml2/libxml2-sources-2.9.7.tar.gz
+tar xzfv libxml2-sources-2.9.7.tar.gz
+cd libxml2-2.9.7/
+CC=i686-w64-mingw32-gcc CC_FOR_BUILD=gcc                            \
+./configure                                                           \
+--host=i686-w64-mingw32                                    \
+--prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/                \
+--exec-prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/
+export PATH=$PATH:/usr/lib/gcc/i686-w64-mingw32/4.8/lib
+make 
+sudo make install
+```
+
+
+### gettext
+
+```{sh, eval = FALSE}
+wget http://ftp.gnu.org/pub/gnu/gettext/gettext-latest.tar.gz
+tar xzfv gettext-latest.tar.gz
+cd gettext-0.19.8.1/
+export CFLAGS="$CFLAGS -O2"
+export CXXFLAGS="$CXXFLAGS -O2"
+CC=i686-w64-mingw32-gcc CC_FOR_BUILD=gcc ./configure         \
+--host=i686-w64-mingw32                                      \
+--prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/                  \
+--exec-prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/             \
+--with-libiconv-prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/lib \
+--oldincludedir=/usr/lib/gcc/i686-w64-mingw32/4.8/include
+make
+sudo make install
+```
+
+
+
+### libffi
+
+```{sh, eval = FALSE}
+wget ftp://sourceware.org/pub/libffi/libffi-3.2.tar.gz
+tar xzfv libffi-3.2.tar.gz
+cd libffi-3.2
+LIBFFI_CFLAGS=/usr/lib/gcc/i686-w64-mingw32/4.8/include             \
+LIBFFI_LIBS=/usr/lib/gcc/i686-w64-mingw32/4.8/lib                   \
+CC=i686-w64-mingw32-gcc CC_FOR_BUILD=gcc ./configure                \
+--host=i686-w64-mingw32                                    \
+--prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/                \
+--exec-prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/           \
+--oldincludedir=/usr/lib/gcc/i686-w64-mingw32/4.8/include
+make 
+sudo make install
+```
+
+## glib
+
+```{sh, eval = FALSE}
+wget http://ftp.gnome.org/pub/gnome/sources/glib/2.50/glib-2.50.0.tar.xz
+tar xf glib-2.50.0.tar.xz
+cd glib-2.50.0
+export PATH=$PATH:/usr/lib/gcc/i686-w64-mingw32/4.8/bin
+CFLAGS="-I/usr/lib/gcc/i686-w64-mingw32/4.8/include"                \
+LIBFFI_CFLAGS=/usr/lib/gcc/i686-w64-mingw32/4.8/include             \
+LIBFFI_LIBS=/usr/lib/gcc/i686-w64-mingw32/4.8/lib                   \
+CC=i686-w64-mingw32-gcc CC_FOR_BUILD=gcc  ./configure               \
+--host=i686-w64-mingw32                                    \
+--prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/                \
+--exec-prefix=/usr/lib/gcc/i686-w64-mingw32/4.8/           \
+--oldincludedir=/usr/lib/gcc/i686-w64-mingw32/4.8/include
+```
+
+
+```{sh, eval = FALSE}
+make clean
+make depend
+make cl
+```
+
+include line in regopt.c
+#include <pcre.h>
+
+
+```{sh, eval = FALSE}
+i686-w64-mingw32-gcc -c -o regopt.o -O2 -Wall             \
+  -static                                                 \
+  -D__MINGW__ -DEMULATE_SETENV -DG_OS_WIN32               \
+  -DREGISTRY_DEFAULT_PATH=\""C:\\\\CWB\\\\Registry"\"     \
+  -DCOMPILE_DATE=\""So 24. Dez 22:14:00 CET 2017"\"       \
+  -DPCRE_STATIC=-1                                        \
+  -DVERSION=\"3.4.12\"                                    \
+  -I/usr/include/glib-2.0                                 \
+  -I/usr/lib/x86_64-linux-gnu/glib-2.0/include            \
+  -I/usr/lib/gcc/i686-w64-mingw32/4.8/include             \
+  regopt.c
+```
+
+Throws one warning (if (ch >= 32 & ch < 127))
+
+
+```{sh, eval = FALSE}
+i686-w64-mingw32-ar cq libcl.a globals.o macros.o list.o  \
+  lexhash.o ngram-hash.o bitfields.o storage.o            \
+  fileutils.o special-chars.o regopt.o corpus.o           \
+  attributes.o registry.tab.o lex.creg.o makecomps.o      \
+  cdaccess.o bitio.o endian.o compression.o binsert.o     \
+  class-mapping.o windows-mmap.o
+
+i686-w64-mingw32-ranlib libcl.a
+```
+
+
+
+how to merge static libraries:
+https://stackoverflow.com/questions/3821916/how-to-merge-two-ar-static-libraries-into-one
+
+```{sh, eval = FALSE}
+create libcl-1.a
+addlib libcl.a
+addlib /usr/lib/gcc/i686-w64-mingw32/4.8/lib/libintl.a
+addlib /usr/lib/gcc/i686-w64-mingw32/4.8/lib/libpcre.a
+addlib /usr/lib/gcc/i686-w64-mingw32/4.8/lib/libglib-2.0.a
+save
+end
+```
+
+```{sh, eval = FALSE}
+ar -M <foo.mri
+```
+
+
+Workflow:
+get archive libraries
+compile libcl.a (make cl)
+ar 
+
+link to 
+Ole32.dll
+winmm.lib
