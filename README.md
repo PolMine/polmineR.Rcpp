@@ -79,3 +79,6 @@ Finally, you need to make sure that polmineR will interface to CWB indexed corpo
 setCorpusWorkbenchInterface("Rcpp")
 ```
 
+```sh
+R CMD INSTALL --build --no-test-load polmineR.Rcpp
+```
