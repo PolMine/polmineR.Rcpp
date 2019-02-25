@@ -4,7 +4,7 @@ if (TRUE) {
   dir.create("../inst/libs/x64", showWarnings = FALSE)
   dir.create("../inst/libs/i386", showWarnings = FALSE)
  
-  if(getRversion() < "3.3.0") setInternet2()
+  if (getRversion() < "3.3.0") setInternet2()
  
   
   ## i386 - files ----------------------
