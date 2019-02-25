@@ -48,6 +48,7 @@ Binaries of the package will be hosted at the PolMine R repository (polmine.sowi
 * Run "R CMD build polmineR.Rcpp" in the folder with the polmineR.Rcpp-folder.
 * Run "R CMD INSTALL polmineR.Rcpp_VERSION".
 
+<<<<<<< HEAD
 
 
 ### Windows (64 bit / x86)
@@ -79,3 +80,6 @@ Finally, you need to make sure that polmineR will interface to CWB indexed corpo
 setCorpusWorkbenchInterface("Rcpp")
 ```
 
+```sh
+R CMD INSTALL --build --no-test-load polmineR.Rcpp
+```
